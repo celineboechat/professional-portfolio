@@ -805,3 +805,34 @@ a:focus-visible {
   }
 
 }
+
+/* ==========================================
+   CONSISTENT CARD HOVER EFFECT
+========================================== */
+
+.project-card,
+.competency-card,
+.experience-card {
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.project-card:hover,
+.competency-card:hover,
+.experience-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+.project-card img,
+.competency-card img,
+.experience-card img {
+  transition: transform 300ms ease;
+}
+
+.project-card:hover img,
+.competency-card:hover img,
+.experience-card:hover img {
+  transform: scale(1.015);
+}
