@@ -58,9 +58,7 @@ a {
 ========================================== */
 
 .hero {
-  min-height: 92vh;
-
-  padding: 80px 24px 70px;
+  padding: 48px 24px 42px;
 
   display: flex;
   flex-direction: column;
@@ -85,8 +83,8 @@ a {
 }
 
 .profile-photo {
-  width: 174px;
-  height: 174px;
+  width: 164px;
+  height: 164px;
 
   object-fit: cover;
   object-position: center 30%;
@@ -100,7 +98,7 @@ a {
 }
 
 .hero h1 {
-  margin: 30px 0 10px;
+  margin: 22px 0 8px;
 
   font-family: Georgia, "Times New Roman", serif;
 
@@ -121,7 +119,7 @@ a {
 }
 
 .hero-tags {
-  margin: 17px 0 0;
+  margin: 12px 0 0;
 
   display: flex;
   flex-wrap: wrap;
@@ -141,16 +139,16 @@ a {
 .hero-intro {
   max-width: 700px;
 
-  margin: 26px auto 0;
+  margin: 18px auto 0;
 
   color: var(--text-soft);
 
   font-size: 1.04rem;
-  line-height: 1.75;
+  line-height: 1.65;
 }
 
 .explore-link {
-  margin-top: 34px;
+  margin-top: 23px;
 
   color: var(--navy);
 
@@ -725,9 +723,7 @@ a:focus-visible {
 @media (max-width: 680px) {
 
   .hero {
-    min-height: auto;
-
-    padding: 65px 20px 58px;
+    padding: 48px 20px 44px;
   }
 
   .profile-photo {
@@ -736,7 +732,7 @@ a:focus-visible {
   }
 
   .hero h1 {
-    margin-top: 26px;
+    margin-top: 22px;
   }
 
   .hero-tags {
