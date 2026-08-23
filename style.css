@@ -18,9 +18,9 @@
 }
 
 
-/* ------------------------------
+/* ==========================================
    BASE
------------------------------- */
+========================================== */
 
 * {
   box-sizing: border-box;
@@ -33,15 +33,14 @@ html {
 
 body {
   margin: 0;
+
   color: var(--navy);
   background: var(--beige-light);
+
   font-family: Inter, ui-sans-serif, system-ui, -apple-system,
     BlinkMacSystemFont, "Segoe UI", sans-serif;
-  line-height: 1.6;
-}
 
-body.modal-open {
-  overflow: hidden;
+  line-height: 1.6;
 }
 
 img {
@@ -49,18 +48,18 @@ img {
   max-width: 100%;
 }
 
-a,
-button {
-  font: inherit;
+a {
+  color: inherit;
 }
 
 
-/* ------------------------------
+/* ==========================================
    HERO
------------------------------- */
+========================================== */
 
 .hero {
   min-height: 92vh;
+
   padding: 80px 24px 70px;
 
   display: flex;
@@ -104,8 +103,10 @@ button {
   margin: 30px 0 10px;
 
   font-family: Georgia, "Times New Roman", serif;
+
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   line-height: 1.05;
+
   letter-spacing: -0.035em;
 }
 
@@ -125,9 +126,11 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
   gap: 8px 12px;
 
   color: var(--text-soft);
+
   font-weight: 650;
 }
 
@@ -137,6 +140,7 @@ button {
 
 .hero-intro {
   max-width: 700px;
+
   margin: 26px auto 0;
 
   color: var(--text-soft);
@@ -166,9 +170,9 @@ button {
 }
 
 
-/* ------------------------------
+/* ==========================================
    GENERAL SECTIONS
------------------------------- */
+========================================== */
 
 .section {
   padding: 100px 24px;
@@ -176,13 +180,16 @@ button {
 
 .section-alt {
   background: var(--beige);
+
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
 
 .section-heading {
   width: min(100%, 760px);
+
   margin: 0 auto 52px;
+
   text-align: center;
 }
 
@@ -201,30 +208,36 @@ button {
   margin: 0;
 
   font-family: Georgia, "Times New Roman", serif;
+
   font-size: clamp(2rem, 4vw, 3.15rem);
   line-height: 1.1;
+
   letter-spacing: -0.025em;
 }
 
 .section-heading > p:last-child {
   max-width: 660px;
+
   margin: 18px auto 0;
 
   color: var(--text-soft);
+
   line-height: 1.7;
 }
 
 
-/* ------------------------------
+/* ==========================================
    SELECTED PROJECTS
------------------------------- */
+========================================== */
 
 .project-grid {
   width: min(100%, var(--max-width));
+
   margin: 0 auto;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+
   gap: 26px;
 }
 
@@ -234,7 +247,7 @@ button {
   display: flex;
   flex-direction: column;
 
-  background: rgba(255, 255, 255, 0.58);
+  background: rgba(255, 255, 255, 0.60);
 
   border: 1px solid rgba(36, 62, 90, 0.12);
   border-radius: var(--radius-large);
@@ -248,17 +261,19 @@ button {
 
 .project-card:hover {
   transform: translateY(-5px);
+
   box-shadow: var(--shadow);
 }
 
+
+/* Project preview */
+
 .project-image-wrapper {
-  height: 360px;
+  height: 340px;
+
   overflow: hidden;
 
-  display: flex;
-  justify-content: center;
-
-  background: rgba(36, 62, 90, 0.06);
+  background: rgba(36, 62, 90, 0.05);
 
   border-bottom: 1px solid var(--line);
 }
@@ -269,7 +284,16 @@ button {
 
   object-fit: cover;
   object-position: top center;
+
+  transition: transform 300ms ease;
 }
+
+.project-card:hover .project-image {
+  transform: scale(1.015);
+}
+
+
+/* Project text */
 
 .card-content {
   flex: 1;
@@ -281,15 +305,15 @@ button {
 }
 
 .card-eyebrow {
-  margin: 0 0 6px;
-
-  font-size: 0.76rem;
-  font-weight: 800;
-
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  margin: 0 0 7px;
 
   color: rgba(36, 62, 90, 0.68);
+
+  font-size: 0.75rem;
+  font-weight: 800;
+
+  letter-spacing: 0.085em;
+  text-transform: uppercase;
 }
 
 .card-content h3,
@@ -298,6 +322,7 @@ button {
   margin: 0;
 
   font-family: Georgia, "Times New Roman", serif;
+
   line-height: 1.2;
 }
 
@@ -309,12 +334,17 @@ button {
   margin: 14px 0 20px;
 
   color: var(--text-soft);
+
   line-height: 1.65;
 }
+
+
+/* Project metrics */
 
 .metrics {
   display: flex;
   flex-wrap: wrap;
+
   gap: 8px;
 
   margin-bottom: 25px;
@@ -331,14 +361,23 @@ button {
   font-size: 0.82rem;
 }
 
+
+/* ==========================================
+   TEXT LINKS
+========================================== */
+
 .text-link {
-  margin-top: auto;
+  display: inline-block;
 
   align-self: flex-start;
+
+  margin-top: auto;
+  padding-bottom: 2px;
 
   color: var(--navy);
 
   font-weight: 800;
+
   text-decoration: none;
 
   border-bottom: 1px solid rgba(36, 62, 90, 0.35);
@@ -350,25 +389,31 @@ button {
 
 .text-link:hover {
   transform: translateX(3px);
+
   border-color: var(--navy);
 }
 
 
-/* ------------------------------
+/* ==========================================
    TRANSVERSAL COMPETENCIES
------------------------------- */
+========================================== */
 
 .competency-grid {
   width: min(100%, var(--max-width));
+
   margin: 0 auto;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+
   gap: 26px;
 }
 
 .competency-card {
   overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
 
   background: var(--beige-light);
 
@@ -376,19 +421,46 @@ button {
   border-radius: var(--radius-large);
 
   box-shadow: var(--shadow-small);
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
 }
+
+.competency-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: var(--shadow);
+}
+
+
+/* Competency preview */
 
 .competency-image {
   width: 100%;
-  height: 285px;
+  height: 300px;
 
   object-fit: cover;
   object-position: top center;
 
   border-bottom: 1px solid var(--line);
+
+  transition: transform 300ms ease;
 }
 
+.competency-card:hover .competency-image {
+  transform: scale(1.015);
+}
+
+
+/* Competency content */
+
 .competency-content {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
   padding: 25px 25px 27px;
 }
 
@@ -397,52 +469,26 @@ button {
 }
 
 .competency-content p {
-  min-height: 102px;
-  margin: 14px 0 20px;
+  margin: 14px 0 22px;
 
   color: var(--text-soft);
+
   line-height: 1.65;
 }
 
 
-/* ------------------------------
-   VIEW BUTTONS
------------------------------- */
-
-.view-button {
-  padding: 0 0 3px;
-
-  color: var(--navy);
-  background: transparent;
-
-  border: 0;
-  border-bottom: 1px solid rgba(36, 62, 90, 0.35);
-
-  cursor: pointer;
-
-  font-weight: 800;
-
-  transition:
-    transform 160ms ease,
-    border-color 160ms ease;
-}
-
-.view-button:hover {
-  transform: translateX(3px);
-  border-color: var(--navy);
-}
-
-
-/* ------------------------------
-   ADDITIONAL EXPERIENCE
------------------------------- */
+/* ==========================================
+   ADDITIONAL PROFESSIONAL EXPERIENCE
+========================================== */
 
 .experience-grid {
   width: min(100%, var(--max-width));
+
   margin: 0 auto;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+
   gap: 26px;
 }
 
@@ -452,16 +498,30 @@ button {
   display: flex;
   flex-direction: column;
 
-  background: rgba(255, 255, 255, 0.58);
+  background: rgba(255, 255, 255, 0.60);
 
   border: 1px solid rgba(36, 62, 90, 0.12);
   border-radius: var(--radius-large);
 
   box-shadow: var(--shadow-small);
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
 }
+
+.experience-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: var(--shadow);
+}
+
+
+/* Experience preview */
 
 .experience-preview {
   height: 300px;
+
   overflow: hidden;
 
   background: rgba(36, 62, 90, 0.05);
@@ -475,7 +535,16 @@ button {
 
   object-fit: cover;
   object-position: top center;
+
+  transition: transform 300ms ease;
 }
+
+.experience-card:hover .experience-preview img {
+  transform: scale(1.015);
+}
+
+
+/* Experience content */
 
 .experience-content {
   flex: 1;
@@ -494,12 +563,17 @@ button {
   margin: 14px 0 18px;
 
   color: var(--text-soft);
+
   line-height: 1.65;
 }
+
+
+/* Experience tags */
 
 .tag-list {
   display: flex;
   flex-wrap: wrap;
+
   gap: 7px;
 
   margin-bottom: 25px;
@@ -510,22 +584,17 @@ button {
 
   background: var(--beige);
 
-  border-radius: 999px;
   border: 1px solid rgba(36, 62, 90, 0.10);
+  border-radius: 999px;
 
   font-size: 0.76rem;
   font-weight: 650;
 }
 
-.experience-content .view-button {
-  margin-top: auto;
-  align-self: flex-start;
-}
 
-
-/* ------------------------------
+/* ==========================================
    CONTACT
------------------------------- */
+========================================== */
 
 .contact-section {
   padding: 90px 24px 55px;
@@ -538,6 +607,7 @@ button {
 
 .contact-inner {
   width: min(100%, 700px);
+
   margin: 0 auto;
 }
 
@@ -559,6 +629,7 @@ button {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+
   gap: 12px;
 }
 
@@ -583,6 +654,7 @@ button {
 
 .contact-button:hover {
   transform: translateY(-2px);
+
   background: var(--beige);
 }
 
@@ -600,125 +672,18 @@ button {
   margin: 55px 0 0;
 
   font-family: Georgia, "Times New Roman", serif;
+
   font-size: 0.92rem;
 
   opacity: 0.7;
 }
 
 
-/* ------------------------------
-   IMAGE MODAL
------------------------------- */
-
-.modal {
-  position: fixed;
-  inset: 0;
-  z-index: 1000;
-
-  display: none;
-  align-items: center;
-  justify-content: center;
-
-  padding: 24px;
-}
-
-.modal.is-open {
-  display: flex;
-}
-
-.modal-backdrop {
-  position: absolute;
-  inset: 0;
-
-  background: rgba(25, 48, 71, 0.82);
-  backdrop-filter: blur(5px);
-}
-
-.modal-window {
-  position: relative;
-  z-index: 1;
-
-  width: min(100%, 980px);
-  max-height: 92vh;
-
-  display: flex;
-  flex-direction: column;
-
-  overflow: hidden;
-
-  background: var(--beige-light);
-
-  border-radius: 22px;
-
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.30);
-}
-
-.modal-header {
-  min-height: 68px;
-
-  padding: 15px 18px 15px 24px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-
-  border-bottom: 1px solid var(--line);
-}
-
-.modal-header h2 {
-  margin: 0;
-
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.25rem;
-}
-
-.modal-close {
-  width: 42px;
-  height: 42px;
-
-  display: grid;
-  place-items: center;
-
-  flex: 0 0 auto;
-
-  color: var(--navy);
-  background: var(--beige);
-
-  border: 0;
-  border-radius: 50%;
-
-  cursor: pointer;
-
-  font-size: 1.8rem;
-  line-height: 1;
-}
-
-.modal-body {
-  overflow: auto;
-
-  padding: 22px;
-
-  background: #e8e8e8;
-}
-
-.modal-body img {
-  width: auto;
-  max-width: 100%;
-  height: auto;
-
-  margin: 0 auto;
-
-  box-shadow: 0 5px 22px rgba(0, 0, 0, 0.16);
-}
-
-
-/* ------------------------------
+/* ==========================================
    ACCESSIBILITY
------------------------------- */
+========================================== */
 
-a:focus-visible,
-button:focus-visible {
+a:focus-visible {
   outline: 3px solid rgba(36, 62, 90, 0.32);
   outline-offset: 4px;
 }
@@ -728,9 +693,9 @@ button:focus-visible {
 }
 
 
-/* ------------------------------
+/* ==========================================
    TABLET
------------------------------- */
+========================================== */
 
 @media (max-width: 980px) {
 
@@ -744,21 +709,24 @@ button:focus-visible {
   .competency-card:last-child,
   .experience-card:last-child {
     grid-column: 1 / -1;
+
     width: min(100%, 560px);
+
     justify-self: center;
   }
 
 }
 
 
-/* ------------------------------
+/* ==========================================
    MOBILE
------------------------------- */
+========================================== */
 
 @media (max-width: 680px) {
 
   .hero {
     min-height: auto;
+
     padding: 65px 20px 58px;
   }
 
@@ -779,6 +747,7 @@ button:focus-visible {
     font-size: 0.96rem;
   }
 
+
   .section {
     padding: 72px 16px;
   }
@@ -787,10 +756,12 @@ button:focus-visible {
     margin-bottom: 38px;
   }
 
+
   .project-grid,
   .competency-grid,
   .experience-grid {
     grid-template-columns: 1fr;
+
     gap: 22px;
   }
 
@@ -798,11 +769,13 @@ button:focus-visible {
   .competency-card:last-child,
   .experience-card:last-child {
     grid-column: auto;
+
     width: 100%;
   }
 
+
   .project-image-wrapper {
-    height: 420px;
+    height: 390px;
   }
 
   .competency-image,
@@ -810,33 +783,10 @@ button:focus-visible {
     height: 340px;
   }
 
-  .competency-content p {
-    min-height: 0;
-  }
-
-  .modal {
-    padding: 10px;
-  }
-
-  .modal-window {
-    max-height: 95vh;
-    border-radius: 16px;
-  }
-
-  .modal-header {
-    padding-left: 16px;
-  }
-
-  .modal-header h2 {
-    font-size: 1rem;
-  }
-
-  .modal-body {
-    padding: 10px;
-  }
 
   .contact-links {
     flex-direction: column;
+
     align-items: stretch;
   }
 
@@ -847,9 +797,9 @@ button:focus-visible {
 }
 
 
-/* ------------------------------
+/* ==========================================
    REDUCED MOTION
------------------------------- */
+========================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
